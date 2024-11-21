@@ -22,3 +22,12 @@ class Cell:
             self._window.draw_line(Line(Point(x1, y1), Point(x2, y1)), "black")
         if self.has_bottom_wall:
             self._window.draw_line(Line(Point(x1, y2), Point(x2, y2)), "black")
+
+    def draw_move(self, to_cell, undo=False):
+        center_coordinate = Point((self.x1 + self.x2) / 2, (self.y1 + self.y2) / 2)
+        to_center_coordinate = Point((to_cell.x1 + to_cell.x2) / 2, (to_cell.y1 + to_cell.y2) / 2)
+        if not undo:
+            self._window.draw_line(Line(center_coordinate, to_center_coordinate), "red")
+        else:
+            self._window.draw_line(Line(center_coordinate, to_center_coordinate), "gray")
+
