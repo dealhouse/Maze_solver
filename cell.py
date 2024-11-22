@@ -14,6 +14,8 @@ class Cell:
         self._window = _window
 
     def draw(self):
+        if self._window is None:
+            return
         if self.has_left_wall:
             self._window.draw_line(Line(Point(self.x1, self.y1), Point(self.x1, self.y2)), "black")
         if self.has_right_wall:
