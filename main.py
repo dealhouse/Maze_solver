@@ -18,9 +18,10 @@ win = Window(800, 600)
 
 # maze = Maze(10, 10, 5, 5, 50, 50, win, seed=0)
 # maze = Maze(10, 10, 5, 5, 50, 50, win, seed=42)
-# maze = Maze(10, 10, 5, 5, 50, 50, win, seed=123)
+maze = Maze(10, 10, 5, 5, 50, 50, win, seed=123)
 # maze = Maze(10, 10, 5, 5, 50, 50, win, seed=999)
 
+maze.solve()
 win.wait_for_close()
 
 
