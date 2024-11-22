@@ -4,7 +4,7 @@ from point import Point
 from cell import Cell
 from maze import Maze
 
-win = Window(1600, 1200)
+win = Window(800, 600)
 
 # cell1 = Cell(100, 200, 100, 200, True, True, True, True, win)
 # cell2 = Cell(300, 400, 300, 400, False, True, True, True, win)
@@ -16,7 +16,11 @@ win = Window(1600, 1200)
 # cell4.draw(700, 800, 700, 800)
 # cell1.draw_move(cell2)
 
-maze = Maze(100, 100, 10, 10, 100, 100, win)
+# maze = Maze(10, 10, 5, 5, 50, 50, win, seed=0)
+# maze = Maze(10, 10, 5, 5, 50, 50, win, seed=42)
+# maze = Maze(10, 10, 5, 5, 50, 50, win, seed=123)
+# maze = Maze(10, 10, 5, 5, 50, 50, win, seed=999)
+
 win.wait_for_close()
 
 
